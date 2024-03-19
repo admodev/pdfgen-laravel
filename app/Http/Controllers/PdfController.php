@@ -40,11 +40,29 @@ class PdfController extends Controller
     private function headerAttributes()
     {
         $this->pdf->SetFont('Times', 'B', 10);
-        $this->pdf->Cell(30, 10, 'Producto', 1, 0, 'C');
+        $this->pdf->Cell(40, 10, 'Producto', 1, 0, 'C');
         $this->pdf->Cell(45, 10, 'Descripcion', 1, 0, 'C');
-        $this->pdf->Cell(60, 10, 'Cantidad', 1, 0, 'C');
+        $this->pdf->Cell(25, 10, 'Cantidad', 1, 0, 'C');
         $this->pdf->Cell(40, 10, 'Precio', 1, 0, 'C');
+        $this->pdf->Cell(45, 10, 'Total', 1, 0, 'C');
         $this->pdf->Ln();
+        $this->pdf->Cell(40, 10, 'Par de ojotas', 1, 0, 'C');
+        $this->pdf->Cell(45, 10, 'Un simple par de ojotas', 1, 0, 'C');
+        $this->pdf->Cell(25, 10, '1', 1, 0, 'C');
+        $this->pdf->Cell(40, 10, '$5400', 1, 0, 'C');
+        $this->pdf->Cell(45, 10, '', 'R', 0, 'C');
+        $this->pdf->Ln();
+        $this->pdf->Cell(40, 10, 'Jean', 1, 0, 'C');
+        $this->pdf->Cell(45, 10, 'Pantalon de jean', 1, 0, 'C');
+        $this->pdf->Cell(25, 10, '1', 1, 0, 'C');
+        $this->pdf->Cell(40, 10, '$25400', 1, 0, 'C');
+        $this->pdf->Cell(45, 10, '', 'R', 0, 'C');
+        $this->pdf->Ln();
+        $this->pdf->Cell(40, 10, '', 1, 0, 'C');
+        $this->pdf->Cell(45, 10, '', 1, 0, 'C');
+        $this->pdf->Cell(25, 10, '', 1, 0, 'C');
+        $this->pdf->Cell(40, 10, '', 1, 0, 'C');
+        $this->pdf->Cell(45, 10, '$30800', 1, 0, 'C');
     }
 
     public function show()
